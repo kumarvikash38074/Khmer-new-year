@@ -19,13 +19,14 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;   /* 👈 FIX: start from top instead of center */
 
   min-height: 100vh;
-  padding: 15px;
+  padding: 20px 15px;        /* space from top */
 
   overflow-x: hidden;
   overflow-y: auto;
+
   color: #444;
 }
 
@@ -33,6 +34,7 @@ body {
 .container {
   width: 100%;
   max-width: 420px;
+  margin-top: 10px;   /* 👈 prevents sticking to top */
 }
 
 /* Glass card */
@@ -147,6 +149,11 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+  @media (min-height: 700px) {
+  body {
+    align-items: center; /* center only on tall screens */
+  }
 }
 </style>
 </head>
