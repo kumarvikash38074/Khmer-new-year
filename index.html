@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Khmer New Year 🌸</title>
+<title>For Laly 🌸</title>
 
 <style>
 * {
@@ -28,14 +28,14 @@ body {
   color: #444;
 }
 
-/* Center wrapper */
+/* Container */
 .container {
   width: 100%;
   max-width: 420px;
   margin-top: 10px;
 }
 
-/* Glass card */
+/* Card */
 .card {
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.3);
@@ -43,7 +43,6 @@ body {
   padding: 20px;
 
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  width: 100%;
   text-align: center;
 }
 
@@ -68,27 +67,20 @@ button {
   max-width: 250px;
 }
 
-button:hover {
-  background: #ff4757;
-}
-
 /* Hidden */
 .hidden {
   display: none;
 }
 
-/* PHOTO FIX (IMPORTANT) */
+/* Photo */
 .photo {
   width: 160px;
   height: 160px;
-
   border-radius: 50%;
   object-fit: cover;
   object-position: center 25%;
-
   margin: 15px auto;
   display: block;
-
   border: 4px solid white;
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
@@ -106,14 +98,9 @@ button:hover {
   font-size: 50px;
   cursor: pointer;
   margin-top: 15px;
-  transition: transform 0.3s;
 }
 
-.gift:hover {
-  transform: scale(1.2);
-}
-
-/* Floating animation */
+/* Floating */
 .float {
   position: fixed;
   bottom: -10px;
@@ -122,14 +109,8 @@ button:hover {
 }
 
 @keyframes rise {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-110vh);
-    opacity: 0;
-  }
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-110vh); opacity: 0; }
 }
 
 /* Fade */
@@ -142,7 +123,6 @@ button:hover {
   to { opacity: 1; }
 }
 
-/* Responsive center fix */
 @media (min-height: 700px) {
   body {
     align-items: center;
@@ -153,7 +133,6 @@ button:hover {
 
 <body>
 
-<!-- 🎶 Music -->
 <audio id="music" loop>
   <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
 </audio>
@@ -162,7 +141,7 @@ button:hover {
 
   <!-- INTRO -->
   <div id="intro" class="card">
-    <h1>💫 Just a little surprise for you...</h1>
+    <h1>💫 A little surprise for Laly...</h1>
     <button onclick="start()">Tap gently 💖</button>
   </div>
 
@@ -170,10 +149,10 @@ button:hover {
   <div id="main" class="card hidden">
 
     <h1>🌸 Happy Khmer New Year 🌸</h1>
-    <p>សួស្តីឆ្នាំថ្មី</p>
+    <p>សួស្តីឆ្នាំថ្មី Laly ✨</p>
 
-    <!-- ✅ PHOTO FIXED HERE -->
-    <img src="her.jpg" class="photo" alt="Photo">
+    <!-- PHOTO -->
+    <img src="her.jpg" class="photo" alt="Laly Photo">
 
     <div id="message"></div>
 
@@ -181,14 +160,14 @@ button:hover {
     <p>tap to open</p>
 
     <div id="giftText" class="hidden fade">
-      <p>✨ In this new year...</p>
-      <p>I hope you smile a little more 🌼</p>
+      <p>✨ Dear Laly...</p>
+      <p>This new year, I just hope you smile more 🌼</p>
       <p>feel lighter ☁️</p>
-      <p>and receive all the happiness you deserve 💖</p>
+      <p>and stay surrounded by kindness 💖</p>
       <br>
       <p>And maybe…</p>
-      <p>someone, somewhere…</p>
-      <p>is quietly thinking of you 🌙</p>
+      <p>someone quietly wishes</p>
+      <p>that your happiness never fades 🌙</p>
     </div>
 
   </div>
@@ -196,7 +175,6 @@ button:hover {
 
 <script>
 
-// Start experience
 function start() {
   document.getElementById("intro").classList.add("hidden");
   document.getElementById("main").classList.remove("hidden");
@@ -207,15 +185,16 @@ function start() {
   floating();
 }
 
-// Typewriter effect
-let text = `On this beautiful beginning of a new year... 🌸
+// Typewriter
+let text = `On this special Khmer New Year... 🌸
 
-Some moments feel soft,
-some people feel special...
+Some people don’t need loud words...
 
-And sometimes,
-you just become a warm thought
-that stays quietly in someone's heart 💫`;
+They just quietly become
+someone’s beautiful thought...
+
+And Laly...
+you are one of them 💫`;
 
 let i = 0;
 
@@ -227,12 +206,12 @@ function typeText() {
   }
 }
 
-// Gift reveal
+// Gift
 function showGift() {
   document.getElementById("giftText").classList.remove("hidden");
 }
 
-// Floating hearts
+// Floating
 function floating() {
   setInterval(() => {
     let el = document.createElement("div");
@@ -242,7 +221,6 @@ function floating() {
     el.style.fontSize = (Math.random() * 20 + 15) + "px";
 
     document.body.appendChild(el);
-
     setTimeout(() => el.remove(), 8000);
   }, 400);
 }
